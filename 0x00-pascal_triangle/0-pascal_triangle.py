@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """ the famous problem pascal triangle """
 
+
 def pascal_triangle(n):
     """
     implement the function for pascal triangle
