@@ -1,4 +1,10 @@
+#!/usr/bin/python3
+""" the famous problem pascal triangle """
+
 def pascal_triangle(n):
+    """
+    implement the function for pascal triangle
+    """
 
     if n <= 0:
         return []
