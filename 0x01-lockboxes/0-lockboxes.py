@@ -24,7 +24,8 @@ def canUnlockAll(boxes):
             new_keys = keys - set(visited)
             if new_keys:
                 for key in new_keys:
-                    visit(key)
+                    if key <= len(boxes) - 1:
+                        visit(key)
 
     if len(visited) is len(boxes):
         return True
