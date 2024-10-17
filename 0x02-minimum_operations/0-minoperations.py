@@ -1,4 +1,4 @@
-#!usr/bin/python3
+#!/usr/bin/python3
 """make the min operations function"""
 
 
@@ -21,3 +21,4 @@ def minOperations(n):
         factor += 1
 
     return operations
+    
