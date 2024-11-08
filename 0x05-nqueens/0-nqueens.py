@@ -16,7 +16,8 @@ def is_valid(board, row, col):
 
 def solve_nqueens(N):
     """
-    Solves the N Queens problem for a given board size N and returns all valid solutions.
+    Solves the N Queens problem for a given board size N and
+    returns all valid solutions.
     """
     def backtrack(row):
         """"
