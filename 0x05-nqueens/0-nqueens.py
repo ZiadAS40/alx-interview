@@ -1,8 +1,11 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 import sys
 
 
 def is_valid(board, row, col):
+    """
+    check if it's valid
+    """
     for i in range(row):
         if board[i] == col or \
            board[i] - i == col - row or \
