@@ -12,7 +12,15 @@ def is_valid(board, row, col):
 
 
 def solve_nqueens(N):
+    """
+    Solves the N Queens problem for a given board size N and returns all valid solutions.
+    """
     def backtrack(row):
+        """"
+        Places queens row by row, checking for valid placements.
+        If all queens are placed
+        successfully, the current board configuration is
+        added to the solutions list."""
         if row == N:
             solution = [[i, board[i]] for i in range(N)]
             solutions.append(solution)
@@ -30,6 +38,7 @@ def solve_nqueens(N):
 
 
 def main():
+    """the main function"""
     if len(sys.argv) != 2:
         print("Usage: nqueens N")
         sys.exit(1)
