@@ -1,5 +1,11 @@
 #!/usr/bin/python3
+"""interview practicing problems
+"""
+
+
 def makeChange(coins, total):
+    """determine the fewest number of coins needed to meet a given amount total
+    """
     if total <= 0:
         return 0
 
