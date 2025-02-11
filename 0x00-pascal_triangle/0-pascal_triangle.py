@@ -1,25 +1,24 @@
 #!/usr/bin/python3
 """ the famous problem pascal triangle """
+import copy
 
 
 def pascal_triangle(n):
-    """
-    implement the function for pascal triangle
-    """
+    """the pascal trangle"""
 
     if n <= 0:
         return []
 
-    triangle = [[1]]
+    curr_list = [1]
+    traingle = []
+    for l in range(0, n):
+        traingle.insert(l, copy.deepcopy(curr_list))
+        curr_list.insert(0, 0)
+        curr_list.append(0)
 
-    for i in range(1, n):
+        new_list = []
+        for n in range(0, len(curr_list) - 1):
+            new_list.insert(n, curr_list[n] + curr_list[n + 1])
+        curr_list = new_list
 
-        row = [1]
-
-        for j in range(1, i):
-            row.append(triangle[i - 1][j - 1] + triangle[i - 1][j])
-
-        row.append(1)
-        triangle.append(row)
-
-    return triangle
+    return traingle
