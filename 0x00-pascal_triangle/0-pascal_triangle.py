@@ -1,7 +1,5 @@
 #!/usr/bin/python3
 """ the famous problem pascal triangle """
-import copy
-
 
 def pascal_triangle(n):
     """the pascal trangle"""
@@ -12,7 +10,8 @@ def pascal_triangle(n):
     curr_list = [1]
     traingle = []
     for l in range(0, n):
-        traingle.insert(l, copy.deepcopy(curr_list))
+        new_list = curr_list[:]
+        traingle.insert(l, new_list)
         curr_list.insert(0, 0)
         curr_list.append(0)
 
